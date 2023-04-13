@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj": {}
+    "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj": {
+    "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
+        "projectUniqueName": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
         "projectName": "SndAPI",
-        "projectPath": "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
+        "projectPath": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
         "packagesPath": "C:\\Users\\tnowicki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\obj\\",
+        "outputPath": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tnowicki\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,6 +59,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
