@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qkBKuyx64lRaKo9fuX6e8Osh5k8Ql52S1GDPbY/WI0KccmBy8hjyp5xz2kNFtNRVN0AuS4LxALVt+ZFNz6mH0g==",
+  "dgSpecHash": "29usiq+9vKyUKkIbDuNnrr7WJUhFZvkUYQl/e1g+wTWCYtgDxCAaXTEnAfmU31i57NmFxLG1asA3NJDzZM9NxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
+  "projectFilePath": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tnowicki\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -60,6 +60,7 @@
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\tnowicki\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\tnowicki\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
