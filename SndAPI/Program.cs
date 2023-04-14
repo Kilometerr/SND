@@ -1,6 +1,7 @@
 using SndAPI.Data;
 using SndAPI.Clients;
-using SndAPI.Controllers;
+using SndAPI.Services;
+using Microsoft.Win32.TaskScheduler;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddScoped<IArshaService, ArshaService>();
 builder.Services.AddScoped<IBdoApiClient, BdoApiClient>();
+builder.Services.AddHostedService<RepeatingService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SndDbContext>(options =>

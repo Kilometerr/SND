@@ -18,7 +18,8 @@ namespace SndAPI.Controllers
         //todo add so it gets id from form on site
         [HttpGet]
         public async Task<IActionResult> GetList(){
-            HttpClient client= _bdoApiClient.GetClientList();
+            HttpClient client= _bdoApiClient.GetClientList();//replace with database call
+            //add business logic to get data for specific item
             var result = await _arshaService.GetById(client, 10006);
             return  Ok(result);
         }

@@ -17,6 +17,7 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
+    <PackageReference Include="TaskScheduler" Version="2.10.1" />
   </ItemGroup>
 
 </Project>

@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0-preview.3.23174.2",
           "Swashbuckle.AspNetCore": "6.4.0",
-          "System.Net.Http.Json": "7.0.1"
+          "System.Net.Http.Json": "7.0.1",
+          "TaskScheduler": "2.10.1"
         },
         "runtime": {
           "SndAPI.dll": {}
@@ -528,6 +529,13 @@
         }
       },
       "System.Diagnostics.DiagnosticSource/5.0.0": {},
+      "System.Diagnostics.EventLog/5.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0"
+        }
+      },
       "System.Drawing.Common/5.0.0": {
         "dependencies": {
           "Microsoft.Win32.SystemEvents": "5.0.0"
@@ -754,6 +762,45 @@
             "assetType": "runtime",
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.0.20.51904"
+          }
+        }
+      },
+      "TaskScheduler/2.10.1": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Diagnostics.EventLog": "5.0.0",
+          "System.Security.AccessControl": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Win32.TaskScheduler.dll": {
+            "assemblyVersion": "2.10.1.0",
+            "fileVersion": "2.10.1.0"
+          }
+        },
+        "resources": {
+          "lib/netcoreapp3.1/de/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netcoreapp3.1/es/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netcoreapp3.1/fr/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netcoreapp3.1/it/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netcoreapp3.1/pl/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netcoreapp3.1/ru/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netcoreapp3.1/zh-CN/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/netcoreapp3.1/zh-Hant/Microsoft.Win32.TaskScheduler.resources.dll": {
+            "locale": "zh-Hant"
           }
         }
       }
@@ -1108,6 +1155,13 @@
       "path": "system.diagnostics.diagnosticsource/5.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
     },
+    "System.Diagnostics.EventLog/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FHkCwUfsTs+/5tsK+c0egLfacUgbhvcwi3wUFWSEEArSXao343mYqcpOVVFMlcCkdNtjU4YwAWaKYwal6f02og==",
+      "path": "system.diagnostics.eventlog/5.0.0",
+      "hashPath": "system.diagnostics.eventlog.5.0.0.nupkg.sha512"
+    },
     "System.Drawing.Common/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1289,6 +1343,13 @@
       "sha512": "sha512-c1ho9WU9ZxMZawML+ssPKZfdnrg/OjR3pe0m9v8230z3acqphwvPJqzAkH54xRYm5ntZHGG1EPP3sux9H3qSPg==",
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
+    },
+    "TaskScheduler/2.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-12b19oq9SOGbBq8745jQVQ08jAjgnsGXidQfclaZ94UZCtJRPkNfM8pz0D7pj04RHcQJQdZZnAUuC93reALqNg==",
+      "path": "taskscheduler/2.10.1",
+      "hashPath": "taskscheduler.2.10.1.nupkg.sha512"
     }
   }
 }
