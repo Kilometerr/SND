@@ -1,7 +1,6 @@
 using SndAPI.Data;
 using SndAPI.Clients;
 using SndAPI.Services;
-using Microsoft.Win32.TaskScheduler;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,11 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<IArshaService, ArshaService>();
 builder.Services.AddTransient<IBdoApiClient, BdoApiClient>();
 builder.Services.AddTransient<IOutfitScrapper, OutfitScrapper>();
+builder.Services.AddTransient<IOutfitRepository, OutfitRepository>();
 builder.Services.AddHostedService<RepeatingService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SndDbContext>(options =>
- options.UseSqlServer(builder.Configuration.GetConnectionString("SNDConnectionString")));
+ options.UseSqlServer(builder.Configuration.GetConnectionString("SNDConnectionString")), ServiceLifetime.Singleton);
 builder.Services.AddHttpClient();
 var app = builder.Build();
 

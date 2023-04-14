@@ -3,7 +3,7 @@ namespace SndAPI.Services
 {
     public class RepeatingService : BackgroundService
     {
-        private readonly PeriodicTimer _timer = new(TimeSpan.FromSeconds(5));
+        private readonly PeriodicTimer _timer = new(TimeSpan.FromDays(1));
         private readonly IOutfitScrapper _outfitScrapper;
 
         public RepeatingService(IOutfitScrapper outfitScrapper)

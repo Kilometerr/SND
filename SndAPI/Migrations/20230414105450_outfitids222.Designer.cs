@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SndAPI.Data;
 
@@ -11,9 +12,11 @@ using SndAPI.Data;
 namespace Snd_API.Migrations
 {
     [DbContext(typeof(SndDbContext))]
-    partial class SndDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230414105450_outfitids222")]
+    partial class outfitids222
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
