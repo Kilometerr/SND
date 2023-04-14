@@ -17,7 +17,7 @@ namespace Snd_API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0-preview.3.23174.2")
+                .HasAnnotation("ProductVersion", "7.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -32,7 +32,6 @@ namespace Snd_API.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SoldToday")
@@ -41,9 +40,29 @@ namespace Snd_API.Migrations
                     b.Property<int>("SoldWeek")
                         .HasColumnType("int");
 
+                    b.Property<int>("TotalSold")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Items");
+                });
+
+            modelBuilder.Entity("SndAPI.Models.OutfitIDs", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("IdList")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OutfitIDs");
                 });
 #pragma warning restore 612, 618
         }
