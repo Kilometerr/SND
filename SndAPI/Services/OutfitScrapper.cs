@@ -1,7 +1,7 @@
+using Newtonsoft.Json;
 using SndAPI.Clients;
 using SndAPI.Models;
-using Newtonsoft.Json;
-using SndAPI.Data;
+using System.Text;
 
 namespace SndAPI.Services
 {
@@ -10,41 +10,38 @@ namespace SndAPI.Services
         private readonly IArshaService _arshaService;
         private readonly IBdoApiClient _bdoApiClient;
         private readonly IOutfitRepository _outfitRepository;
-
         public OutfitScrapper(IArshaService arshaService, IBdoApiClient bdoApiClient, IOutfitRepository outfitRepository)
         {
             _arshaService = arshaService;
             _bdoApiClient = bdoApiClient;
             _outfitRepository = outfitRepository;
         }
+
         public async Task Scrap()
         {
             var client = _bdoApiClient.GetClientAll();
-            var StringJson = await _arshaService.GetAll(client);
-            //var ItemList = JsonConvert.DeserializeObject<List<JsonItem>>(StringJson);
-            var ItemList = JsonConvert.DeserializeObject<List<JsonItem>>(StringJson);
-            var IDs= ScrapOutfitIDs(ItemList);
-            System.Console.WriteLine(IDs.Id);
-            System.Console.WriteLine(IDs.IdList);
-            System.Console.WriteLine(IDs.UpdateDate);
-            _outfitRepository.saveIDs(IDs);
+            var stringJson = await _arshaService.GetAll(client);
+            var outfitIDs = ScrapOutfitIDs(JsonConvert.DeserializeObject<List<JsonItem>>(stringJson));
+            await _outfitRepository.SaveIDsAsync(outfitIDs);
         }
 
         private static OutfitIDs ScrapOutfitIDs(List<JsonItem> jsonItems)
         {
-            string IDs = "";
+            var outfitIDs = new StringBuilder();
             foreach (var item in jsonItems)
             {
                 if (item.Name.Contains("Outfit Set") || item.Name.Contains("Premium Set"))
                 {
-                    IDs = IDs + item.Id + ",";
+                    outfitIDs.Append(item.Id);
+                    outfitIDs.Append(",");
                 }
-            } 
+            }
 
-            OutfitIDs oid = new OutfitIDs();
-            oid.IdList=IDs.Remove(IDs.Length - 1);
-            oid.UpdateDate=DateTime.Now;
-            return oid;
+            return new OutfitIDs
+            {
+                IdList = outfitIDs.ToString().TrimEnd(','),
+                UpdateDate = DateTime.Now
+            };
         }
     }
 }

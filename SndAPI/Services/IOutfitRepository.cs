@@ -4,6 +4,6 @@ namespace SndAPI.Services
 {
     public interface IOutfitRepository
     {
-        void saveIDs(OutfitIDs outfitIDs);
+        Task SaveIDsAsync(OutfitIDs outfitIDs);
     }
 }

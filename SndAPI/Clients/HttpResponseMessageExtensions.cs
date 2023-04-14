@@ -1,20 +1,18 @@
-using System;
-
 namespace SndAPI.Clients
 {
-   static class HttpResponseMessageExtensions
-{
-    internal static void WriteRequestToConsole(this HttpResponseMessage response)
+    static class HttpResponseMessageExtensions
     {
-        if (response is null)
+        internal static void WriteRequestToConsole(this HttpResponseMessage response)
         {
-            return;
-        }
+            if (response is null)
+            {
+                return;
+            }
 
-        var request = response.RequestMessage;
-        Console.Write($"{request?.Method} ");
-        Console.Write($"{request?.RequestUri} ");
-        Console.WriteLine($"HTTP/{request?.Version}");        
+            var request = response.RequestMessage;
+            Console.Write($"{request?.Method} ");
+            Console.Write($"{request?.RequestUri} ");
+            Console.WriteLine($"HTTP/{request?.Version}");
+        }
     }
-}
 }

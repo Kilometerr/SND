@@ -1,7 +1,7 @@
-using SndAPI.Data;
-using SndAPI.Clients;
-using SndAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using SndAPI.Clients;
+using SndAPI.Data;
+using SndAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

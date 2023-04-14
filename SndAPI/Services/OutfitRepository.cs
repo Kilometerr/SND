@@ -12,10 +12,10 @@ namespace SndAPI.Services
             _sndDbContext = sndDbContext;
         }
 
-        public void saveIDs(OutfitIDs outfitIDs)
+        public async Task SaveIDsAsync(OutfitIDs outfitIDs)
         {
-            _sndDbContext.Add(outfitIDs);
-            _sndDbContext.SaveChanges();
+            await _sndDbContext.OutfitIDs.AddAsync(outfitIDs);
+            await _sndDbContext.SaveChangesAsync();
         }
     }
 }
