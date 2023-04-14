@@ -1,13 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SndAPI.Services
 {
     public class RepeatingService : BackgroundService
     {
-        private readonly PeriodicTimer _timer = new(TimeSpan.FromMilliseconds(1000));
+        private readonly PeriodicTimer _timer = new(TimeSpan.FromSeconds(5));
+        private readonly IOutfitScrapper _outfitScrapper;
+
+        public RepeatingService(IOutfitScrapper outfitScrapper)
+        {
+            _outfitScrapper = outfitScrapper;
+        }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -16,8 +18,8 @@ namespace SndAPI.Services
             }
         }
 
-        private static async Task DoWorkAsync(){
-            Console.WriteLine(DateTime.Now.ToString("O"));
+        private async Task DoWorkAsync(){
+           await _outfitScrapper.Scrap();
         }
     }
 }

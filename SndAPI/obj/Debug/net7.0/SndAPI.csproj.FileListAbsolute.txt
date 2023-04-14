@@ -95,3 +95,4 @@ c:\Users\tnowicki\Desktop\C_S\SND\SndAPI\bin\Debug\net7.0\pl\Microsoft.Win32.Tas
 c:\Users\tnowicki\Desktop\C_S\SND\SndAPI\bin\Debug\net7.0\ru\Microsoft.Win32.TaskScheduler.resources.dll
 c:\Users\tnowicki\Desktop\C_S\SND\SndAPI\bin\Debug\net7.0\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
 c:\Users\tnowicki\Desktop\C_S\SND\SndAPI\bin\Debug\net7.0\zh-Hant\Microsoft.Win32.TaskScheduler.resources.dll
+c:\Users\tnowicki\Desktop\C_S\SND\SndAPI\bin\Debug\net7.0\Newtonsoft.Json.dll

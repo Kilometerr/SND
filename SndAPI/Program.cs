@@ -9,8 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddScoped<IArshaService, ArshaService>();
-builder.Services.AddScoped<IBdoApiClient, BdoApiClient>();
+builder.Services.AddTransient<IArshaService, ArshaService>();
+builder.Services.AddTransient<IBdoApiClient, BdoApiClient>();
+builder.Services.AddTransient<IOutfitScrapper, OutfitScrapper>();
 builder.Services.AddHostedService<RepeatingService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
