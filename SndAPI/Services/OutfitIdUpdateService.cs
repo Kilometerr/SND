@@ -1,12 +1,12 @@
 
 namespace SndAPI.Services
 {
-    public class RepeatingService : BackgroundService
+    public class OutfitIdUpdateService : BackgroundService
     {
-        private readonly PeriodicTimer _timer = new(TimeSpan.FromDays(1));
+        private readonly PeriodicTimer _timer = new(TimeSpan.FromSeconds(5));
         private readonly IOutfitScrapper _outfitScrapper;
 
-        public RepeatingService(IOutfitScrapper outfitScrapper)
+        public OutfitIdUpdateService(IOutfitScrapper outfitScrapper)
         {
             _outfitScrapper = outfitScrapper;
         }

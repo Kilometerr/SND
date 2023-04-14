@@ -12,7 +12,7 @@ builder.Services.AddTransient<IArshaService, ArshaService>();
 builder.Services.AddTransient<IBdoApiClient, BdoApiClient>();
 builder.Services.AddTransient<IOutfitScrapper, OutfitScrapper>();
 builder.Services.AddTransient<IOutfitRepository, OutfitRepository>();
-builder.Services.AddHostedService<RepeatingService>();
+builder.Services.AddHostedService<OutfitIdUpdateService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SndDbContext>(options =>
