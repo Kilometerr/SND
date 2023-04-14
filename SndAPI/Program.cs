@@ -1,5 +1,6 @@
 using SndAPI.Data;
 using SndAPI.Clients;
+using SndAPI.Controllers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddScoped<IArshaService, ArshaService>();
+builder.Services.AddScoped<IBdoApiClient, BdoApiClient>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SndDbContext>(options =>
@@ -26,6 +29,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
- HttpClient BdoApiSearchListClient = BdoApiClient.getClient();
-await BdoApiClient.GetById(BdoApiSearchListClient,10006);
 app.Run();
