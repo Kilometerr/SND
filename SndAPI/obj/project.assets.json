@@ -4229,26 +4229,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tymot\\.nuget\\packages\\": {}
+    "C:\\Users\\tnowicki\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tymot\\source\\repos\\Kilometerr\\SND\\SndAPI\\SndAPI.csproj",
+      "projectUniqueName": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
       "projectName": "SndAPI",
-      "projectPath": "C:\\Users\\tymot\\source\\repos\\Kilometerr\\SND\\SndAPI\\SndAPI.csproj",
-      "packagesPath": "C:\\Users\\tymot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tymot\\source\\repos\\Kilometerr\\SND\\SndAPI\\obj\\",
+      "projectPath": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\SndAPI.csproj",
+      "packagesPath": "C:\\Users\\tnowicki\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\tnowicki\\Desktop\\C_S\\SND\\SndAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tymot\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\tnowicki\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4321,7 +4319,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
